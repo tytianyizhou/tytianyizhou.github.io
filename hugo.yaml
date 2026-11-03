@@ -1,4 +1,4 @@
-baseURL: https://tianyichow-tcs.github.io/
+baseURL: https://tytianyizhou.github.io/
 locale: en-us
 title: Tianyi Zhou
 theme: PaperMod
@@ -34,7 +34,7 @@ params:
     - name: googlescholar
       url: "https://scholar.google.com/citations?user=fdUJcwYAAAAJ&hl=en"
     - name: github
-      url: "https://github.com/tianyichow-tcs"
+      url: "https://github.com/tytianyizhou"
     - name: linkedin
       url: "https://www.linkedin.com/in/tianyi-zhou-b28830269/"
     # - name: cv
