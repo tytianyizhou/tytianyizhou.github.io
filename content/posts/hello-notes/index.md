@@ -1,6 +1,7 @@
 ---
 title: "Notes on Adam: From SGD to Adaptive Moments"
 date: 2026-11-03
+draft: true   # template note; visible only with `hugo server -D`
 tags: [optimization, deep-learning]
 summary: "A template note showing math, code, tables, and footnotes. Copy this folder to start a new note."
 ---

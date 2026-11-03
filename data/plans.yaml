@@ -1,8 +1,8 @@
 # What you're working on / plan to do. `status` is optional:
 # use "now", "next", or "done" (each gets its own color).
-- status: now
-  text: "Uncertainty-aware decoding and verification for reliable LLM reasoning, using hidden-state representations to detect and mitigate hallucinations."
-- status: now
-  text: "Optimizers for LLM pretraining: a spectral-boosting variant of Muon (under review at ICLR 2027)."
-- status: next
-  text: "Evaluation, post-training, and alignment of agentic language models."
+# - status: now
+#   text: "Uncertainty-aware decoding and verification for reliable LLM reasoning, using hidden-state representations to detect and mitigate hallucinations."
+# - status: now
+#   text: "Optimizers for LLM pretraining: a spectral-boosting variant of Muon (under review at ICLR 2027)."
+# - status: next
+#   text: "Evaluation, post-training, and alignment of agentic language models."

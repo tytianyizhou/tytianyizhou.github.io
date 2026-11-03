@@ -37,8 +37,8 @@ params:
       url: "https://github.com/tianyichow-tcs"
     - name: linkedin
       url: "https://www.linkedin.com/in/tianyi-zhou-b28830269/"
-    - name: cv
-      url: "/cv.pdf"
+    # - name: cv
+    #   url: "/cv.pdf"
 
   # How many items the home page shows before "show all"
   homeNewsCount: 6
@@ -47,8 +47,8 @@ params:
   # Topic tabs for "Selected Publications" on the home page.
   # `id` must match the `topic:` field in data/publications.yaml.
   pubTopics:
-    - { id: llm, name: "LLM" }
-    - { id: data-mining, name: "Data Mining" }
+    - { id: llm, name: "LLM reliability and capabilities" }
+    - { id: data-mining, name: "Mitigate harm in online ML systems" }
 
   # ---- Notes (blog) settings, Lilian-Weng style ----------------------------
   ShowReadingTime: true
