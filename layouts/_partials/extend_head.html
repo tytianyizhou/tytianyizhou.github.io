@@ -1,0 +1,4 @@
+{{- /* KaTeX stylesheet (self-hosted in static/katex), only on pages that contain math */ -}}
+{{- if or (.Page.Store.Get "hasMath") (.Param "math") }}
+<link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}">
+{{- end }}

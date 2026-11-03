@@ -1,0 +1,42 @@
+# One entry per paper. Newest first is nice but not required (the
+# Publications page groups by year automatically).
+#
+# Fields:
+#   title, authors (list), venue, venue_short, year   – required-ish
+#   selected: true     – also show on the home page
+#   image              – thumbnail in /static/images/papers/ (optional)
+#   note               – e.g. "Oral", "Spotlight", "Best Paper"
+#   tldr               – one-line summary (markdown ok)
+#   links              – any name: url pairs, rendered as buttons
+#   bibtex             – pasted BibTeX, shown in a collapsible box
+#   Put a * after a name for equal contribution, e.g. "Tyler Zhou*"
+
+- title: "An Example Paper Title About Something Interesting"
+  authors: ["Tyler Zhou", "Coauthor One", "Advisor Name"]
+  venue: "Conference on Neural Information Processing Systems (NeurIPS)"
+  venue_short: "NeurIPS 2026"
+  year: 2026
+  note: "Spotlight"
+  selected: true
+  image: /images/papers/placeholder.svg
+  tldr: "One sentence on what the paper shows and why it matters."
+  links:
+    arxiv: https://arxiv.org/abs/0000.00000
+    code: https://github.com/tylerzhou
+    project: "#"
+  bibtex: |
+    @inproceedings{zhou2026example,
+      title     = {An Example Paper Title About Something Interesting},
+      author    = {Zhou, Tyler and One, Coauthor and Name, Advisor},
+      booktitle = {NeurIPS},
+      year      = {2026}
+    }
+
+- title: "A Second Paper, Workshop Version"
+  authors: ["Coauthor Two*", "Tyler Zhou*", "Advisor Name"]
+  venue: "ICML Workshop on Something"
+  venue_short: "ICML-W 2025"
+  year: 2025
+  selected: false
+  links:
+    pdf: "#"

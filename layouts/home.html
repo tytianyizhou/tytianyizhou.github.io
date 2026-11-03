@@ -1,0 +1,92 @@
+{{- define "main" }}
+{{- $p := site.Params.profile }}
+{{- $data := hugo.Data }}
+
+<section class="hero">
+  <img class="hero-avatar" src="{{ $p.image | relURL }}" alt="{{ $p.name }}">
+  <div class="hero-text">
+    <h1 class="hero-name">{{ $p.name }}</h1>
+    <div class="hero-role">{{ $p.role | markdownify }}</div>
+    {{- partial "social_icons.html" (dict "align" "left") }}
+  </div>
+</section>
+
+{{- /* Bio comes from content/_index.md */}}
+<section class="home-section post-content md-content">
+  {{ .Content }}
+</section>
+
+{{- with $data.news }}
+<section class="home-section">
+  <h2 class="home-h2">News</h2>
+  {{- $n := site.Params.homeNewsCount | default 6 }}
+  <ul class="news">
+    {{- range first $n . }}
+    <li><span class="news-date">{{ .date }}</span><span class="news-text">{{ .text | markdownify }}</span></li>
+    {{- end }}
+  </ul>
+  {{- if gt (len .) $n }}
+  <details class="more">
+    <summary>Show older news</summary>
+    <ul class="news">
+      {{- range after $n . }}
+      <li><span class="news-date">{{ .date }}</span><span class="news-text">{{ .text | markdownify }}</span></li>
+      {{- end }}
+    </ul>
+  </details>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- with $data.plans }}
+<section class="home-section">
+  <h2 class="home-h2">Current Focus &amp; Plans</h2>
+  <ul class="plans">
+    {{- range . }}
+    <li>{{ with .status }}<span class="plan-status plan-{{ . | urlize }}">{{ . }}</span>{{ end }}{{ .text | markdownify }}</li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{- with where $data.publications "selected" true }}
+<section class="home-section">
+  <h2 class="home-h2">Selected Publications <a class="h2-more" href="{{ "publications/" | relURL }}">all →</a></h2>
+  {{- range . }}{{ partial "pub-item.html" . }}{{ end }}
+</section>
+{{- end }}
+
+{{- $notes := where site.RegularPages "Section" "posts" }}
+{{- with $notes }}
+<section class="home-section">
+  <h2 class="home-h2">Recent Notes <a class="h2-more" href="{{ "posts/" | relURL }}">all →</a></h2>
+  <ul class="recent-notes">
+    {{- range first (site.Params.homeNotesCount | default 5) . }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span class="note-date">{{ .Date.Format "Jan 2006" }}</span>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{- with $data.awards }}
+<section class="home-section">
+  <h2 class="home-h2">Honors &amp; Awards</h2>
+  <ul class="news">
+    {{- range . }}
+    <li><span class="news-date">{{ .year }}</span><span class="news-text">{{ .text | markdownify }}</span></li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{- with $p.contact }}
+<section class="home-section contact">
+  <h2 class="home-h2">Contact</h2>
+  <div class="post-content md-content">{{ . | markdownify }}</div>
+</section>
+{{- end }}
+
+{{- end }}

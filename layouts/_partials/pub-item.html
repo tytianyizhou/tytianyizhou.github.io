@@ -1,0 +1,38 @@
+{{- /* Renders one publication. Context: a map from data/publications.yaml */ -}}
+{{- $me := site.Params.profile.name -}}
+<article class="pub">
+  <div class="pub-thumb">
+    {{- with .image }}
+    <img src="{{ . | relURL }}" alt="" loading="lazy">
+    {{- else }}
+    <div class="pub-thumb-empty">{{ .venue_short | default .venue }}</div>
+    {{- end }}
+  </div>
+  <div class="pub-body">
+    <div class="pub-title">
+      {{- with or .links.paper .links.arxiv .links.pdf }}<a href="{{ . }}">{{ $.title }}</a>{{ else }}{{ .title }}{{ end -}}
+    </div>
+    <div class="pub-authors">
+      {{- range $i, $a := .authors -}}
+        {{- if $i }}, {{ end -}}
+        {{- if strings.Contains $a $me }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end -}}
+      {{- end -}}
+    </div>
+    <div class="pub-venue">
+      <em>{{ .venue }}</em>{{ with .year }}, {{ . }}{{ end }}
+      {{- with .note }} <span class="pub-note">{{ . }}</span>{{ end }}
+    </div>
+    {{- with .tldr }}<div class="pub-tldr">{{ . | markdownify }}</div>{{ end }}
+    <div class="pub-links">
+      {{- range $k, $v := .links }}
+      <a class="pill" href="{{ $v }}">{{ $k }}</a>
+      {{- end }}
+      {{- with .bibtex }}
+      <details class="pub-bib">
+        <summary class="pill">bibtex</summary>
+        <pre><code>{{ . }}</code></pre>
+      </details>
+      {{- end }}
+    </div>
+  </div>
+</article>

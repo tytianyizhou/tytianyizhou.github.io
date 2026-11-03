@@ -1,0 +1,1 @@
+KaTeX 0.19.1 (MIT) - must match the KaTeX version embedded in Hugo (transform.ToMath).

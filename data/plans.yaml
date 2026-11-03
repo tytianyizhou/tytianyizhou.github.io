@@ -1,0 +1,8 @@
+# What you're working on / plan to do. `status` is optional:
+# use "now", "next", or "done" (each gets its own color).
+- status: now
+  text: "Studying optimizers for LLM pretraining (Muon, Shampoo, Adam variants)."
+- status: next
+  text: "Writing up notes on scaling laws and training dynamics."
+- status: next
+  text: "Looking for summer 2027 research internships, so feel free to reach out!"

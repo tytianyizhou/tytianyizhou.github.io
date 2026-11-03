@@ -1,0 +1,94 @@
+baseURL: https://tylerzhou.github.io/
+locale: en-us
+title: Tyler Zhou
+theme: PaperMod
+enableRobotsTXT: true
+enableEmoji: true
+
+pagination:
+  pagerSize: 10
+
+outputs:
+  home: [HTML, RSS, JSON] # JSON powers the search page
+
+params:
+  env: production
+  author: Tyler Zhou
+  description: "Tyler Zhou: research, publications, and learning notes."
+  defaultTheme: auto # follows the visitor's OS; toggle button in header
+  disableThemeToggle: false
+
+  # ---- Your profile (shown on the home page) -------------------------------
+  profile:
+    name: Tyler Zhou # bolded automatically in publication author lists
+    image: /images/profile.svg # replace with /images/profile.jpg
+    role: "PhD Student · Your Department · Your University"
+    # Shown in the Contact section at the bottom of the home page (markdown ok)
+    contact: |
+      **Email:** `firstname [at] university [dot] edu`<br>
+      **Office:** Building, Room 000, City
+
+  socialIcons:
+    - name: email
+      url: "mailto:you@example.edu"
+    - name: googlescholar
+      url: "https://scholar.google.com/"
+    - name: github
+      url: "https://github.com/tylerzhou"
+    - name: x
+      url: "https://x.com/"
+    - name: linkedin
+      url: "https://www.linkedin.com/"
+    - name: cv
+      url: "/cv.pdf"
+
+  # How many items the home page shows before "show all"
+  homeNewsCount: 6
+  homeNotesCount: 5
+
+  # ---- Notes (blog) settings, Lilian-Weng style ----------------------------
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowShareButtons: false
+  ShowRssButtonInSectionTermList: true
+  disableSpecial1stPost: true
+  dateFormat: "January 2, 2006"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 2
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - { identifier: notes, name: Notes, url: /posts/, weight: 10 }
+    - { identifier: pubs, name: Publications, url: /publications/, weight: 20 }
+    - { identifier: archive, name: Archive, url: /archives/, weight: 30 }
+    - { identifier: tags, name: Tags, url: /tags/, weight: 40 }
+    - { identifier: search, name: Search, url: /search/, weight: 50 }
+
+taxonomies:
+  tag: tags
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # allow raw HTML inside markdown
+    extensions:
+      passthrough: # lets $...$ / $$...$$ reach the KaTeX renderer untouched
+        enable: true
+        delimiters:
+          block: [["\\[", "\\]"], ["$$", "$$"]]
+          inline: [["\\(", "\\)"], ["$", "$"]]
+  highlight:
+    noClasses: false
+    lineNos: false
