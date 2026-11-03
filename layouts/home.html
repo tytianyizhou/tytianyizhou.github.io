@@ -52,8 +52,42 @@
 {{- with where $data.publications "selected" true }}
 <section class="home-section">
   <h2 class="home-h2">Selected Publications <a class="h2-more" href="{{ "publications/" | relURL }}">all →</a></h2>
-  {{- range . }}{{ partial "pub-item.html" . }}{{ end }}
+  {{- $sel := . }}
+  {{- with site.Params.pubTopics }}
+  <div class="topic-tabs" role="tablist" aria-label="Filter publications by topic">
+    <button type="button" class="topic-tab active" data-topic="all" role="tab" aria-selected="true">All <span class="topic-count">{{ len $sel }}</span></button>
+    {{- range . }}
+    <button type="button" class="topic-tab" data-topic="{{ .id }}" role="tab" aria-selected="false">{{ .name }} <span class="topic-count">{{ len (where $sel "topic" .id) }}</span></button>
+    {{- end }}
+  </div>
+  {{- end }}
+  <div class="topic-list">
+    {{- range . }}{{ partial "pub-item.html" . }}{{ end }}
+  </div>
 </section>
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.topic-tab');
+    var pubs = document.querySelectorAll('.topic-list .pub');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var t = tab.dataset.topic;
+        tabs.forEach(function (b) {
+          var on = b === tab;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-selected', on);
+        });
+        pubs.forEach(function (p) {
+          p.hidden = !(t === 'all' || p.dataset.topic === t);
+        });
+      });
+    });
+    // Optional deep link: /?topic=llm opens with that tab selected
+    var q = new URLSearchParams(location.search).get('topic');
+    var start = q && document.querySelector('.topic-tab[data-topic="' + CSS.escape(q) + '"]');
+    if (start) start.click();
+  })();
+</script>
 {{- end }}
 
 {{- $notes := where site.RegularPages "Section" "posts" }}

@@ -44,6 +44,12 @@ params:
   homeNewsCount: 6
   homeNotesCount: 5
 
+  # Topic tabs for "Selected Publications" on the home page.
+  # `id` must match the `topic:` field in data/publications.yaml.
+  pubTopics:
+    - { id: llm, name: "LLM" }
+    - { id: data-mining, name: "Data Mining" }
+
   # ---- Notes (blog) settings, Lilian-Weng style ----------------------------
   ShowReadingTime: true
   ShowWordCount: true

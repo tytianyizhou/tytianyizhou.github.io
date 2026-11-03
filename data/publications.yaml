@@ -16,6 +16,7 @@
   authors: ["Johanne Medina*", "Tianyi Zhou*", "Keivin Isufaj", "Aristides Gionis", "Sanjay Chawla"]
   venue: "Conference on Neural Information Processing Systems (NeurIPS)"
   venue_short: "NeurIPS 2026"
+  topic: llm   # llm | data-mining (see pubTopics in hugo.yaml)
   image: /images/papers/neurips26-entropy.png
   year: 2026
   selected: true
@@ -26,6 +27,7 @@
   authors: ["Meher Chaitanya*", "Tianyi Zhou*", "Aristides Gionis"]
   venue: "arXiv preprint, under review at ICLR 2027"
   venue_short: "Preprint"
+  topic: llm   # llm | data-mining (see pubTopics in hugo.yaml)
   image: /images/papers/muon-spectral.png
   year: 2026
   note: "Preprint"
@@ -38,6 +40,7 @@
   authors: ["Tianyi Zhou", "Johanne Medina", "Sanjay Chawla"]
   venue: "AAAI Conference on Artificial Intelligence (AAAI)"
   venue_short: "AAAI 2026"
+  topic: llm   # llm | data-mining (see pubTopics in hugo.yaml)
   image: /images/papers/aaai26-confabulation.png
   year: 2026
   selected: true
@@ -47,41 +50,47 @@
 - title: "Gradient-Based Diversity Optimization with Differentiable Top-k Objective"
   authors: ["Tianyi Zhou", "Sebastian Dalleiger", "Ece Calikus", "Aristides Gionis"]
   venue: "International Conference on Learning Representations (ICLR)"
+  image: /images/papers/iclr26.png
   venue_short: "ICLR 2026"
+  topic: data-mining   # llm | data-mining (see pubTopics in hugo.yaml)
   year: 2026
   selected: true
   links:
     paper: https://openreview.net/pdf?id=cuzWopwoZG
 
-- title: "Global and Local Uncertainty of LLMs"
-  authors: ["Johanne Medina*", "Tianyi Zhou*", "Keivin Isufaj", "Aristides Gionis", "Sanjay Chawla"]
-  venue: "KDD 2026 Workshop on Uncertainty Reasoning and Quantification in Decision Making"
-  venue_short: "KDD-W 2026"
-  year: 2026
-  note: "Workshop"
+# - title: "Global and Local Uncertainty of LLMs"
+#   authors: ["Johanne Medina*", "Tianyi Zhou*", "Keivin Isufaj", "Aristides Gionis", "Sanjay Chawla"]
+#   venue: "KDD 2026 Workshop on Uncertainty Reasoning and Quantification in Decision Making"
+#   venue_short: "KDD-W 2026"
+#   year: 2026
+#   note: "Workshop"
 
 # ---------------- 2025 ----------------
 - title: "Calibrated and Diverse News Coverage"
   authors: ["Tianyi Zhou", "Stefan Neumann", "Kiran Garimella", "Aristides Gionis"]
   venue: "ACM International Conference on Information and Knowledge Management (CIKM)"
+  image: /images/papers/cikm25.png
   venue_short: "CIKM 2025"
+  topic: data-mining   # llm | data-mining (see pubTopics in hugo.yaml)
   year: 2025
+  selected: true
   links:
     paper: https://doi.org/10.1145/3746252.3761149
 
-- title: "Uncertainty-Aware LLMs Fail to Flag Misleading Contexts"
-  authors: ["Tianyi Zhou", "Johanne Medina", "Sanjay Chawla"]
-  venue: "NeurIPS 2025 Workshop on Reliable ML from Unreliable Data"
-  venue_short: "NeurIPS-W 2025"
-  year: 2025
-  note: "Workshop"
+# - title: "Uncertainty-Aware LLMs Fail to Flag Misleading Contexts"
+#   authors: ["Tianyi Zhou", "Johanne Medina", "Sanjay Chawla"]
+#   venue: "NeurIPS 2025 Workshop on Reliable ML from Unreliable Data"
+#   venue_short: "NeurIPS-W 2025"
+#   year: 2025
+#   note: "Workshop"
 
 # ---------------- 2024 ----------------
 - title: "Modeling the Impact of Timeline Algorithms on Opinion Dynamics Using Low-rank Updates"
   authors: ["Tianyi Zhou", "Stefan Neumann", "Kiran Garimella", "Aristides Gionis"]
   venue: "Proceedings of the ACM Web Conference (WWW)"
   venue_short: "WWW 2024"
-  image: /images/papers/www24-opinion.png
+  topic: data-mining   # llm | data-mining (see pubTopics in hugo.yaml)
+  image: /images/papers/www24.png
   year: 2024
   note: "Oral"
   selected: true

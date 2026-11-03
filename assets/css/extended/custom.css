@@ -212,3 +212,24 @@ details.more summary {
 .pub-note-workshop, .pub-note-preprint { color: var(--secondary) !important; font-weight: 500; }
 .timeline li { grid-template-columns: 100px 1fr; }
 @media (max-width: 600px) { .timeline li { grid-template-columns: 84px 1fr; } }
+
+/* ---------- Topic tabs (Selected Publications) ---------- */
+.topic-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: -2px 0 6px; }
+.topic-tab {
+  font-size: 14px;
+  padding: 5px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--tertiary);
+  background: transparent;
+  color: var(--secondary);
+  cursor: pointer;
+  transition: all .15s;
+}
+.topic-tab:hover { border-color: var(--accent); color: var(--accent); }
+.topic-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+[data-theme="dark"] .topic-tab.active { color: #1d1e20; }
+.topic-count { font-size: 12px; opacity: .75; margin-inline-start: 2px; }
+.topic-list .pub[hidden] { display: none; }
+/* divider between visible items only */
+.topic-list .pub + .pub { border-top: none; }
+.topic-list .pub:not([hidden]) ~ .pub { border-top: 1px solid var(--border); }

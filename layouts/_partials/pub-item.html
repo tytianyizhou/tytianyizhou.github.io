@@ -1,6 +1,6 @@
 {{- /* Renders one publication. Context: a map from data/publications.yaml */ -}}
 {{- $me := site.Params.profile.name -}}
-<article class="pub">
+<article class="pub"{{ with .topic }} data-topic="{{ . }}"{{ end }}>
   <div class="pub-thumb">
     {{- with .image }}
     <img src="{{ . | relURL }}" alt="" loading="lazy">
