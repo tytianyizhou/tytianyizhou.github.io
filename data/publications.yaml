@@ -16,6 +16,7 @@
   authors: ["Johanne Medina*", "Tianyi Zhou*", "Keivin Isufaj", "Aristides Gionis", "Sanjay Chawla"]
   venue: "Conference on Neural Information Processing Systems (NeurIPS)"
   venue_short: "NeurIPS 2026"
+  image: /images/papers/neurips26-entropy.png
   year: 2026
   selected: true
   links:
@@ -25,6 +26,7 @@
   authors: ["Meher Chaitanya*", "Tianyi Zhou*", "Aristides Gionis"]
   venue: "arXiv preprint, under review at ICLR 2027"
   venue_short: "Preprint"
+  image: /images/papers/muon-spectral.png
   year: 2026
   note: "Preprint"
   selected: true
@@ -36,6 +38,7 @@
   authors: ["Tianyi Zhou", "Johanne Medina", "Sanjay Chawla"]
   venue: "AAAI Conference on Artificial Intelligence (AAAI)"
   venue_short: "AAAI 2026"
+  image: /images/papers/aaai26-confabulation.png
   year: 2026
   selected: true
   links:
@@ -78,6 +81,7 @@
   authors: ["Tianyi Zhou", "Stefan Neumann", "Kiran Garimella", "Aristides Gionis"]
   venue: "Proceedings of the ACM Web Conference (WWW)"
   venue_short: "WWW 2024"
+  image: /images/papers/www24-opinion.png
   year: 2024
   note: "Oral"
   selected: true

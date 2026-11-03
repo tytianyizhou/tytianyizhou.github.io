@@ -21,7 +21,7 @@ params:
   # ---- Your profile (shown on the home page) -------------------------------
   profile:
     name: Tianyi Zhou # bolded automatically in publication author lists
-    image: /images/profile.svg # replace with /images/profile.jpg
+    image: /images/profile.png # replace with /images/profile.jpg
     role: "PhD Student in Computer Science, [KTH Royal Institute of Technology](https://www.kth.se/profile/tzho)<br>Visiting PhD Student, Stanford University"
     # Shown in the Contact section at the bottom of the home page (markdown ok)
     contact: |
