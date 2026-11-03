@@ -32,7 +32,7 @@ params:
     - name: email
       url: "mailto:tyzhou@stanford.edu"
     - name: googlescholar
-      url: "https://scholar.google.com/citations?user=fdUJcwYAAAAJ&hl=en"
+      url: "https://scholar.google.com/citations?user=XmteaF8AAAAJ&hl=en"
     - name: github
       url: "https://github.com/tianyichow-tcs"
     - name: linkedin
