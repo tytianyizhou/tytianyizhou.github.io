@@ -1,6 +1,6 @@
 baseURL: https://tylerzhou.github.io/
 locale: en-us
-title: Tyler Zhou
+title: Tianyi Zhou
 theme: PaperMod
 enableRobotsTXT: true
 enableEmoji: true
@@ -13,32 +13,30 @@ outputs:
 
 params:
   env: production
-  author: Tyler Zhou
-  description: "Tyler Zhou: research, publications, and learning notes."
+  author: Tianyi Zhou
+  description: "Tianyi Zhou: PhD student working on reliable, safe, and aligned language models."
   defaultTheme: auto # follows the visitor's OS; toggle button in header
   disableThemeToggle: false
 
   # ---- Your profile (shown on the home page) -------------------------------
   profile:
-    name: Tyler Zhou # bolded automatically in publication author lists
+    name: Tianyi Zhou # bolded automatically in publication author lists
     image: /images/profile.svg # replace with /images/profile.jpg
-    role: "PhD Student · Your Department · Your University"
+    role: "PhD Student in Computer Science, [KTH Royal Institute of Technology](https://www.kth.se/profile/tzho)<br>Visiting PhD Student, Stanford University"
     # Shown in the Contact section at the bottom of the home page (markdown ok)
     contact: |
-      **Email:** `firstname [at] university [dot] edu`<br>
-      **Office:** Building, Room 000, City
+      **Email:** [tyzhou@stanford.edu](mailto:tyzhou@stanford.edu)<br>
+      **Affiliations:** KTH Royal Institute of Technology, Stockholm · Stanford University, Stanford, CA
 
   socialIcons:
     - name: email
-      url: "mailto:you@example.edu"
+      url: "mailto:tyzhou@stanford.edu"
     - name: googlescholar
-      url: "https://scholar.google.com/"
+      url: "https://scholar.google.com/citations?user=fdUJcwYAAAAJ&hl=en"
     - name: github
-      url: "https://github.com/tylerzhou"
-    - name: x
-      url: "https://x.com/"
+      url: "https://github.com/tianyichow-tcs"
     - name: linkedin
-      url: "https://www.linkedin.com/"
+      url: "https://www.linkedin.com/in/tianyi-zhou-b28830269/"
     - name: cv
       url: "/cv.pdf"
 

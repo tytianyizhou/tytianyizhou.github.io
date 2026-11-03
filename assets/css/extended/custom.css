@@ -209,3 +209,6 @@ details.more summary {
 .hero-role { overflow-wrap: anywhere; }
 .pub-bib summary.pill { display: inline-block; margin: 0; font-weight: 400; }
 .pub-bib { margin: 0; }
+.pub-note-workshop, .pub-note-preprint { color: var(--secondary) !important; font-weight: 500; }
+.timeline li { grid-template-columns: 100px 1fr; }
+@media (max-width: 600px) { .timeline li { grid-template-columns: 84px 1fr; } }

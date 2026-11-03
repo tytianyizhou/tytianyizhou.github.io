@@ -1,42 +1,85 @@
-# One entry per paper. Newest first is nice but not required (the
-# Publications page groups by year automatically).
+# One entry per paper. The Publications page groups by year automatically.
 #
 # Fields:
-#   title, authors (list), venue, venue_short, year   – required-ish
+#   title, authors (list), venue, venue_short, year
 #   selected: true     – also show on the home page
-#   image              – thumbnail in /static/images/papers/ (optional)
-#   note               – e.g. "Oral", "Spotlight", "Best Paper"
+#   image              – thumbnail in /static/images/papers/ (optional; without one,
+#                        a colored box with venue_short is shown)
+#   note               – e.g. "Oral", "Spotlight", "Under Review"
 #   tldr               – one-line summary (markdown ok)
 #   links              – any name: url pairs, rendered as buttons
 #   bibtex             – pasted BibTeX, shown in a collapsible box
-#   Put a * after a name for equal contribution, e.g. "Tyler Zhou*"
+#   Put a * after a name for co-first authorship, e.g. "Tianyi Zhou*"
 
-- title: "An Example Paper Title About Something Interesting"
-  authors: ["Tyler Zhou", "Coauthor One", "Advisor Name"]
+# ---------------- 2026 ----------------
+- title: "Integrating Local and Global Entropy for Uncertainty Quantification in LLMs"
+  authors: ["Johanne Medina*", "Tianyi Zhou*", "Keivin Isufaj", "Aristides Gionis", "Sanjay Chawla"]
   venue: "Conference on Neural Information Processing Systems (NeurIPS)"
   venue_short: "NeurIPS 2026"
   year: 2026
-  note: "Spotlight"
   selected: true
-  image: /images/papers/placeholder.svg
-  tldr: "One sentence on what the paper shows and why it matters."
   links:
-    arxiv: https://arxiv.org/abs/0000.00000
-    code: https://github.com/tylerzhou
-    project: "#"
-  bibtex: |
-    @inproceedings{zhou2026example,
-      title     = {An Example Paper Title About Something Interesting},
-      author    = {Zhou, Tyler and One, Coauthor and Name, Advisor},
-      booktitle = {NeurIPS},
-      year      = {2026}
-    }
+    arxiv: https://arxiv.org/abs/2606.09875
 
-- title: "A Second Paper, Workshop Version"
-  authors: ["Coauthor Two*", "Tyler Zhou*", "Advisor Name"]
-  venue: "ICML Workshop on Something"
-  venue_short: "ICML-W 2025"
-  year: 2025
-  selected: false
+- title: "Does Muon Need Fine-Grained Spectral Shaping?"
+  authors: ["Meher Chaitanya*", "Tianyi Zhou*", "Aristides Gionis"]
+  venue: "arXiv preprint, under review at ICLR 2027"
+  venue_short: "Preprint"
+  year: 2026
+  note: "Preprint"
+  selected: true
+  tldr: "A spectral-boosting variant of Muon that reweights gradient update directions by their signal content, grounded in the spiked random-matrix structure of minibatch gradients."
   links:
-    pdf: "#"
+    arxiv: https://arxiv.org/pdf/2610.07497
+
+- title: "Can LLMs Detect Their Confabulations? Estimating Reliability in Uncertainty-Aware Language Models"
+  authors: ["Tianyi Zhou", "Johanne Medina", "Sanjay Chawla"]
+  venue: "AAAI Conference on Artificial Intelligence (AAAI)"
+  venue_short: "AAAI 2026"
+  year: 2026
+  selected: true
+  links:
+    arxiv: https://arxiv.org/abs/2508.08139
+
+- title: "Gradient-Based Diversity Optimization with Differentiable Top-k Objective"
+  authors: ["Tianyi Zhou", "Sebastian Dalleiger", "Ece Calikus", "Aristides Gionis"]
+  venue: "International Conference on Learning Representations (ICLR)"
+  venue_short: "ICLR 2026"
+  year: 2026
+  selected: true
+  links:
+    paper: https://openreview.net/pdf?id=cuzWopwoZG
+
+- title: "Global and Local Uncertainty of LLMs"
+  authors: ["Johanne Medina*", "Tianyi Zhou*", "Keivin Isufaj", "Aristides Gionis", "Sanjay Chawla"]
+  venue: "KDD 2026 Workshop on Uncertainty Reasoning and Quantification in Decision Making"
+  venue_short: "KDD-W 2026"
+  year: 2026
+  note: "Workshop"
+
+# ---------------- 2025 ----------------
+- title: "Calibrated and Diverse News Coverage"
+  authors: ["Tianyi Zhou", "Stefan Neumann", "Kiran Garimella", "Aristides Gionis"]
+  venue: "ACM International Conference on Information and Knowledge Management (CIKM)"
+  venue_short: "CIKM 2025"
+  year: 2025
+  links:
+    paper: https://doi.org/10.1145/3746252.3761149
+
+- title: "Uncertainty-Aware LLMs Fail to Flag Misleading Contexts"
+  authors: ["Tianyi Zhou", "Johanne Medina", "Sanjay Chawla"]
+  venue: "NeurIPS 2025 Workshop on Reliable ML from Unreliable Data"
+  venue_short: "NeurIPS-W 2025"
+  year: 2025
+  note: "Workshop"
+
+# ---------------- 2024 ----------------
+- title: "Modeling the Impact of Timeline Algorithms on Opinion Dynamics Using Low-rank Updates"
+  authors: ["Tianyi Zhou", "Stefan Neumann", "Kiran Garimella", "Aristides Gionis"]
+  venue: "Proceedings of the ACM Web Conference (WWW)"
+  venue_short: "WWW 2024"
+  year: 2024
+  note: "Oral"
+  selected: true
+  links:
+    paper: https://dl.acm.org/doi/10.1145/3589334.3645714

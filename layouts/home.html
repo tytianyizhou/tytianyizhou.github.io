@@ -71,16 +71,9 @@
 </section>
 {{- end }}
 
-{{- with $data.awards }}
-<section class="home-section">
-  <h2 class="home-h2">Honors &amp; Awards</h2>
-  <ul class="news">
-    {{- range . }}
-    <li><span class="news-date">{{ .year }}</span><span class="news-text">{{ .text | markdownify }}</span></li>
-    {{- end }}
-  </ul>
-</section>
-{{- end }}
+{{- partial "timeline.html" (dict "title" "Education &amp; Experience" "items" $data.education) }}
+{{- partial "timeline.html" (dict "title" "Honors &amp; Awards" "items" $data.awards) }}
+{{- partial "timeline.html" (dict "title" "Academic Service" "items" $data.services) }}
 
 {{- with $p.contact }}
 <section class="home-section contact">

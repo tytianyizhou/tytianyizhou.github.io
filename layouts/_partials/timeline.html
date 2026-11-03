@@ -1,0 +1,11 @@
+{{- /* A titled list of {year, text} items. Args: dict "title" "items" */ -}}
+{{- with .items }}
+<section class="home-section">
+  <h2 class="home-h2">{{ $.title | safeHTML }}</h2>
+  <ul class="news timeline">
+    {{- range . }}
+    <li><span class="news-date">{{ .year }}</span><span class="news-text">{{ .text | markdownify }}</span></li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}

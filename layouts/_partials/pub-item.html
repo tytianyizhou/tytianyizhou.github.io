@@ -20,7 +20,7 @@
     </div>
     <div class="pub-venue">
       <em>{{ .venue }}</em>{{ with .year }}, {{ . }}{{ end }}
-      {{- with .note }} <span class="pub-note">{{ . }}</span>{{ end }}
+      {{- with .note }} <span class="pub-note pub-note-{{ . | urlize }}">{{ . }}</span>{{ end }}
     </div>
     {{- with .tldr }}<div class="pub-tldr">{{ . | markdownify }}</div>{{ end }}
     <div class="pub-links">
