@@ -34,7 +34,7 @@ params:
     - name: googlescholar
       url: "https://scholar.google.com/citations?user=fdUJcwYAAAAJ&hl=en"
     - name: github
-      url: "https://github.com/tytianyizhou"
+      url: "https://github.com/tianyichow-tcs"
     - name: linkedin
       url: "https://www.linkedin.com/in/tianyi-zhou-b28830269/"
     # - name: cv
